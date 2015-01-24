@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-// +build !appengine
+// +build !appengine,!secure
 
 package main
 
@@ -22,16 +22,16 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/tools/playground/socket"
+	"github.com/Go-zh/tools/playground/socket"
 
 	// Imports so that go build/install automatically installs them.
-	_ "bitbucket.org/mikespook/go-tour-zh/pic"
-	_ "bitbucket.org/mikespook/go-tour-zh/tree"
-	_ "bitbucket.org/mikespook/go-tour-zh/wc"
+	_ "github.com/Go-zh/tour/pic"
+	_ "github.com/Go-zh/tour/tree"
+	_ "github.com/Go-zh/tour/wc"
 )
 
 const (
-	basePkg    = "bitbucket.org/mikespook/go-tour-zh/"
+	basePkg    = "github.com/Go-zh/tour"
 	socketPath = "/socket"
 )
 
